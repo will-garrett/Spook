@@ -32,7 +32,10 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #f4f8fb;
+    background: #f4f8fb; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f8fb 0%, #aeb1b2 25%, #2b2b2b 71%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f4f8fb 0%,#aeb1b2 25%,#2b2b2b 71%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f4f8fb 0%,#aeb1b2 25%,#2b2b2b 71%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .img {
@@ -115,6 +118,10 @@ body {
     color: #fff;
     background: color(var(--darkgrey) l(-5%)) no-repeat center center;
     background-size: cover;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .site-header:before {
@@ -662,7 +669,11 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-template .site-main,
 .page-template .site-main {
     padding-bottom: 4vw;
-    background: #fff;
+    background: #f4f8fb; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f8fb 0%, #aeb1b2 25%, #2b2b2b 71%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f4f8fb 0%,#aeb1b2 25%,#2b2b2b 71%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f4f8fb 0%,#aeb1b2 25%,#2b2b2b 71%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
 
 .post-full {
@@ -709,26 +720,34 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-image {
     margin: 0 -10vw -165px;
-    height: 800px;
+    height: 600px;
     background: var(--lightgrey) center center;
     background-size: cover;
     border-radius: 5px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 1170px) {
     .post-full-image {
         margin: 0 -4vw -100px;
-        height: 600px;
+        height: 450px;
         border-radius: 0;
     }
 }
 
 @media (max-width: 800px) {
     .post-full-image {
-        height: 400px;
+        height: 450px;
     }
 }
-
+.about {
+    background: #fff;
+    margin-top: 15px;
+    padding-top: 15px;
+}
 .post-full-content {
     position: relative;
     margin: 0 auto;
@@ -1296,7 +1315,7 @@ Usage (In Ghost editor):
 }
 
 .author-card-name a {
-    color: var(--darkgrey);
+    color: var(--lightgrey);
     font-weight: 700;
 }
 

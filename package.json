@@ -2,7 +2,7 @@
     "name": "spook",
     "description": "The modified personal blogging theme for Ghost. Beautiful, minimal and responsive.",
     "demo": "https://demo.ghost.io",
-    "version": "2.7.0",
+    "version": "0.0.1",
     "engines": {
         "ghost": ">=2.0.0"
     },
